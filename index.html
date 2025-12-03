@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio – Larissa Pinheiro</title>
 
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <header class="header">
-      <div class="header-container container">
-        <div>
-          <h2 class="logo">Port<span class="span">Fólio.</span></h2>
-        </div>
+  <div class="header-container container">
+    <div>
+      <h2 class="logo">Port<span class="span">Fólio.</span></h2>
+    </div>
 
-        <nav aria-label="Primaria">
-          <ul class="menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#formacao">Formação</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#experiencia">Experiência</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<button
+  class="menu-toggle"
+  type="button"
+  aria-label="Abrir menu de navegação"
+  aria-expanded="false"
+>
+  <img src="./assets/menu.svg" alt="" />
+</button>
+
+    <nav class="nav" aria-label="Primaria">
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
     <main>
       <section id="inicio">
@@ -76,8 +84,8 @@
             parte de quem eu sou.
           </p>
 
-          <a class="download" target="_blank" href="#">Download CV</a>
-        </div>
+          <a class="download" target="_blank" rel="noopener noreferrer" href="./assets/img/curriculo-larissa-pinheiro.pdf">Download CV</a>
+</div>
       </article>
 
       <section class="formacao" id="formacao">
@@ -129,105 +137,169 @@
         </div>
       </section>
 
-      <section class="projetos" id="projetos">
-        <div class="container projetos-geral">
-          <h2 class="projetos-titulo">Projetos</h2>
-          <span class="spanPrimarioProjetos">Veja alguns dos meus projetos</span>
+<section class="projetos" id="projetos">
+  <div class="container projetos-geral">
+    <h2 class="projetos-titulo">Projetos</h2>
+    <span class="spanPrimarioProjetos">Veja alguns dos meus projetos</span>
 
-          <div class="mockups-grid">
-            <article class="mockup-card reveal">
-              <div class="mockup-image mockup-plantae"></div>
+    <div class="mockups-grid">
+      <article class="mockup-card reveal">
+        <div class="mockup-image mockup-plantae"></div>
 
-              <div class="mockup-info">
-                <p class="projeto-meta">UI Design · Website</p>
-                <h3>Plantaê – Plataforma de conscientização ambiental</h3>
-                <p>
-                  Projeto acadêmico com foco em gamificação, painel de impacto e
-                  educação ambiental acessível, unindo identidade visual e
-                  front-end responsivo.
-                </p>
-              </div>
-            </article>
-
-            <article class="mockup-card mockup-card--reverse reveal">
-              <div class="mockup-image mockup-bookapp"></div>
-
-              <div class="mockup-info">
-                <p class="projeto-meta">UI Design · Figma</p>
-                <h3>Bookfly – UI para aplicativo de leitura</h3>
-                <p>
-                  Interface criada no Figma para organizar leituras, criar metas
-                  e acompanhar o progresso em uma experiência visual
-                  confortável.
-                </p>
-              </div>
-            </article>
-
-            <article class="mockup-card reveal">
-              <div class="mockup-image mockup-cherie"></div>
-
-              <div class="mockup-info">
-                <p class="projeto-meta">Website · Visual Design</p>
-                <h3>Chérie by Lari – Inspiração de moda &amp; estilo</h3>
-                <p>
-                  Landing page com estética inspirada em editoriais de moda,
-                  paleta quente e curadoria visual voltada para temporadas e
-                  estilos.
-                </p>
-              </div>
-            </article>
-
-            <article class="mockup-card mockup-card--reverse reveal">
-              <div class="mockup-image mockup-saphire"></div>
-
-              <div class="mockup-info">
-                <p class="projeto-meta">Website · Front-end</p>
-                <h3>Projeto Saphire – Landing page imobiliária</h3>
-                <p>
-                  Página desenvolvida no curso de Front-End, com layout limpo,
-                  sessões bem definidas e foco na apresentação dos serviços
-                  imobiliários.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <h3 class="outros-titulo">Outros projetos</h3>
-          <div class="outros-grid">
-            <article class="outro-card reveal">
-              <div class="outro-thumb outro-rosemood"></div>
-              <p>
-                <strong>Rosemood</strong> — Curadoria visual e landing page
-                inspiracional.
-              </p>
-            </article>
-
-            <article class="outro-card reveal">
-              <div class="outro-thumb outro-batom"></div>
-              <p>
-                <strong>UI de e-commerce</strong> — Página de compra de batom
-                (Figma).
-              </p>
-            </article>
-
-            <article class="outro-card reveal">
-              <div class="outro-thumb outro-fashion"></div>
-              <p>
-                <strong>Portfólio Fashion Designer</strong> — Layout editorial e
-                estético.
-              </p>
-            </article>
-
-            <article class="outro-card reveal">
-              <div class="outro-thumb outro-laribot"></div>
-              <p>
-                <strong>LariBot</strong> — Stylista digital e assistente de
-                estilo.
-              </p>
-            </article>
-          </div>
+        <div class="mockup-info">
+          <p class="projeto-meta">UI Design · Website</p>
+          <h3>Plantaê – Plataforma de conscientização ambiental</h3>
+          <p>
+            Projeto acadêmico com foco em gamificação, painel de impacto e
+            educação ambiental acessível, unindo identidade visual e
+            front-end responsivo.
+          </p>
+          <a
+            class="projeto-link"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver projeto
+          </a>
         </div>
-      </section>
+      </article>
+
+      <article class="mockup-card mockup-card--reverse reveal">
+        <div class="mockup-image mockup-bookapp"></div>
+
+        <div class="mockup-info">
+          <p class="projeto-meta">UI Design · Figma</p>
+          <h3>Bookfly – UI para aplicativo de leitura</h3>
+          <p>
+            Interface criada no Figma para organizar leituras, criar metas
+            e acompanhar o progresso em uma experiência visual
+            confortável.
+          </p>
+          <a
+            class="projeto-link"
+            href="https://www.figma.com/community/file/1562482090579174458/bookapp-ui-design"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver projeto
+          </a>
+        </div>
+      </article>
+
+      <article class="mockup-card reveal">
+        <div class="mockup-image mockup-cherie"></div>
+
+        <div class="mockup-info">
+          <p class="projeto-meta">Website · Visual Design</p>
+          <h3>Chérie by Lari – Inspiração de moda &amp; estilo</h3>
+          <p>
+            Landing page com estética inspirada em editoriais de moda,
+            paleta quente e curadoria visual voltada para temporadas e
+            estilos.
+          </p>
+          <a
+            class="projeto-link"
+            href="https://laripinheiroz.github.io/projeto-cherie/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver projeto
+          </a>
+        </div>
+      </article>
+
+      <article class="mockup-card mockup-card--reverse reveal">
+        <div class="mockup-image mockup-saphire"></div>
+
+        <div class="mockup-info">
+          <p class="projeto-meta">Website · Front-end</p>
+          <h3>Projeto Saphire – Landing page imobiliária</h3>
+          <p>
+            Página desenvolvida no curso de Front-End, com layout limpo,
+            sessões bem definidas e foco na apresentação dos serviços
+            imobiliários.
+          </p>
+          <a
+            class="projeto-link"
+            href="https://laripinheiroz.github.io/projeto-saphire/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver projeto
+          </a>
+        </div>
+      </article>
+    </div>
+
+    <h3 class="outros-titulo">Outros projetos</h3>
+    <div class="outros-grid">
+      <article class="outro-card reveal">
+        <div class="outro-thumb outro-rosemood"></div>
+        <p>
+          <strong>Rosemood</strong> — Curadoria visual e landing page
+          inspiracional.
+        </p>
+        <a
+          class="projeto-link projeto-link--small"
+          href="https://laripinheiroz.github.io/projeto-rosemood/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver projeto
+        </a>
+      </article>
+
+      <article class="outro-card reveal">
+        <div class="outro-thumb outro-batom"></div>
+        <p>
+          <strong>UI de e-commerce</strong> — Página de compra de batom
+          (Figma).
+        </p>
+        <a
+          class="projeto-link projeto-link--small"
+          href="https://www.figma.com/community/file/1553188369733715243/website-ui-design"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver projeto
+        </a>
+      </article>
+
+      <article class="outro-card reveal">
+        <div class="outro-thumb outro-fashion"></div>
+        <p>
+          <strong>Portfólio Fashion Designer</strong> — Layout editorial e
+          estético.
+        </p>
+        <a
+          class="projeto-link projeto-link--small"
+          href="https://www.figma.com/community/file/1557862683444976769/fashion-designer-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver projeto
+        </a>
+      </article>
+
+      <article class="outro-card reveal">
+        <div class="outro-thumb outro-laribot"></div>
+        <p>
+          <strong>LariBot</strong> — Stylista digital e assistente de
+          estilo.
+        </p>
+        <a
+          class="projeto-link projeto-link--small"
+          href="https://laripinheiroz.github.io/exercicios-css/exercicios.html/landingpage.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver projeto
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
     </main>
 
     <script src="./js/script.js"></script>

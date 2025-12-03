@@ -25,6 +25,17 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  background-color: var(--roxo-escuro);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  position: relative;
+}
+
 .header-container {
   display: flex;
   flex-wrap: wrap;
@@ -82,6 +93,36 @@ body {
 .menu a:hover::after {
   transform: scaleX(1);
 }
+.menu-toggle {
+  display: none;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: none;
+}
+
+.menu-toggle img {
+  display: block;
+  width: 28px;
+  height: 28px;
+}
+
+.menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
 
 .inicio-items {
   display: grid;
@@ -274,8 +315,6 @@ body {
   transform: translateY(0);
 }
 
-/* PROJETOS */
-
 .projetos {
   background-color: var(--roxo-medio);
 }
@@ -308,8 +347,6 @@ body {
   font-weight: 300;
 }
 
-/* MOCKUPS EM DESTAQUE */
-
 .mockups-grid {
   margin-top: 48px;
   display: grid;
@@ -328,9 +365,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
   transition: transform 0.3s ease, box-shadow 0.3s ease,
     border-color 0.3s ease;
-}
-
-.mockup-card--reverse {
 }
 
 .mockup-image {
@@ -386,6 +420,48 @@ body {
   line-height: 1.6;
 }
 
+.projeto-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--rosa);
+  border-radius: 999px;
+  border: 1px solid rgba(213, 106, 114, 0.9);
+  background: transparent;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.projeto-link::after {
+  content: "↗";
+  font-size: 0.8rem;
+}
+
+.projeto-link:hover {
+  background-color: rgba(213, 106, 114, 0.15);
+  color: var(--rosa);
+  border-color: rgba(213, 106, 114, 0.9);
+}
+
+.projeto-link--small {
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  margin-top: 6px;
+}
+
+.outro-card .projeto-link {
+  display: inline-flex;
+}
+
+
 .mockup-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
@@ -395,8 +471,6 @@ body {
 .mockup-card:hover .mockup-image {
   transform: translateY(-2px) scale(1.02);
 }
-
-/* OUTROS PROJETOS */
 
 .outros-titulo {
   margin-top: 64px;
@@ -449,8 +523,6 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* MOCKUP BACKGROUNDS */
-
 .mockup-plantae {
   background-image: url("../assets/img/mockup-plantae.png");
 }
@@ -487,8 +559,9 @@ body {
   .inicio-items {
     grid-template-columns: 1fr;
     height: auto;
-    row-gap: 40px;
+    row-gap: 32px;
     text-align: center;
+    padding: 40px 0 50px;
   }
 
   .items-direita h1 {
@@ -506,5 +579,74 @@ body {
   .outros-grid {
     flex-direction: column;
     align-items: center;
+  }
+
+  .header-container {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .nav {
+    position: static;
+  }
+
+  .menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 220px;
+    background-color: var(--roxo-escuro);
+    border-radius: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 16px 12px;
+    gap: 2px;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 20;
+    transition: max-height 0.25s ease, opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .menu a {
+    width: 100%;
+    padding: 8px 2px;
+    font-size: 1rem;
+  }
+
+  .menu.menu-open {
+    max-height: 260px;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .imagem-esquerda {
+    width: 260px;
+    height: 260px;
+    border-radius: 60px;
+  }
+
+  .items-direita h2 {
+    font-size: 2.1rem;
+  }
+
+  .items-direita h1 {
+    font-size: 2.6rem;
+  }
+
+  .items-direita span {
+    font-size: 1.1rem;
   }
 }
