@@ -21,7 +21,6 @@ const menu = document.querySelector(".menu");
 
 if (menuToggle && menu) {
   const icon = menuToggle.querySelector("img");
-
   const closedIcon = "./assets/menu.svg";
   const openIcon = "./assets/menu-open.svg";
 
@@ -43,11 +42,27 @@ if (menuToggle && menu) {
   });
 }
 
-//form (ainda nao tem)
 const form = document.querySelector(".contact-form");
 if (form) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    alert("Formulário enviado (simulação).");
+
+    const dados = new FormData(form);
+    const nome = dados.get("nome");
+    const email = dados.get("email");
+    const assunto = dados.get("assunto");
+    const mensagem = dados.get("mensagem");
+
+    const destinatario = "larissapinnheiroz@gmail.com";
+    const assuntoEmail = `[Portfólio] ${assunto || "Nova mensagem"}`;
+    const corpo = `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`;
+
+    const mailto = `mailto:${destinatario}?subject=${encodeURIComponent(
+      assuntoEmail
+    )}&body=${encodeURIComponent(corpo)}`;
+
+    window.location.href = mailto;
+    form.reset();
   });
 }
+

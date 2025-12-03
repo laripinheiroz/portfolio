@@ -25,6 +25,11 @@ body {
   margin: 0 auto;
 }
 
+section[id],
+article[id] {
+  scroll-margin-top: 120px;
+}
+
 .header {
   background-color: var(--roxo-escuro);
   position: sticky;
@@ -93,8 +98,8 @@ body {
 .menu a:hover::after {
   transform: scaleX(1);
 }
+
 .menu-toggle {
-  display: none;
   margin-left: auto;
   padding: 0;
   border: none;
@@ -110,19 +115,6 @@ body {
   width: 28px;
   height: 28px;
 }
-
-.menu-toggle.is-open span:nth-child(1) {
-  transform: translateY(4px) rotate(45deg);
-}
-
-.menu-toggle.is-open span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.is-open span:nth-child(3) {
-  transform: translateY(-4px) rotate(-45deg);
-}
-
 
 .inicio-items {
   display: grid;
@@ -225,8 +217,11 @@ body {
   margin-top: 40px;
   font-weight: 500;
   border: 2px solid var(--rosa);
-  transition: transform 0.25s ease, background-color 0.25s ease,
-    color 0.25s ease, letter-spacing 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    letter-spacing 0.25s ease;
 }
 
 .download:hover {
@@ -275,7 +270,9 @@ body {
   border: 3px solid transparent;
   display: grid;
   text-align: left;
-  transition: border-color 0.4s ease, transform 0.4s ease,
+  transition:
+    border-color 0.4s ease,
+    transform 0.4s ease,
     box-shadow 0.4s ease;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
@@ -363,7 +360,9 @@ body {
   gap: 16px;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease,
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
     border-color 0.3s ease;
 }
 
@@ -433,7 +432,6 @@ body {
   border-radius: 999px;
   border: 1px solid rgba(213, 106, 114, 0.9);
   background: transparent;
-  text-decoration: none;
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
@@ -460,7 +458,6 @@ body {
 .outro-card .projeto-link {
   display: inline-flex;
 }
-
 
 .mockup-card:hover {
   transform: translateY(-8px);
@@ -493,7 +490,9 @@ body {
   font-size: 0.95rem;
   font-weight: 300;
   width: 250px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease,
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
     border-color 0.25s ease;
 }
 
@@ -555,6 +554,268 @@ body {
   background-image: url("../assets/img/mockup-laribot.png");
 }
 
+.experiencia {
+  background-color: var(--roxo-escuro);
+}
+
+.experiencia-wrapper {
+  padding: 80px 20px 90px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  gap: 40px;
+  color: #fff;
+}
+
+.experiencia-titulo {
+  font-size: 3.2rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.experiencia-texto p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.experiencia-texto strong {
+  color: var(--rosa);
+  font-weight: 500;
+}
+
+.experiencia-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.exp-card {
+  background-color: var(--cinza-card);
+  border-radius: 20px;
+  padding: 18px 20px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55);
+}
+
+.exp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.exp-card-header h3 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.exp-local {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.exp-periodo {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.exp-card p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.exp-tags li {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contato {
+  background-color: var(--roxo-medio);
+}
+
+.contato-wrapper {
+  padding: 80px 20px 90px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 40px;
+  color: #fff;
+  align-items: flex-start;
+}
+
+.contato-texto h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.contato-texto p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.contato-lista {
+  font-size: 0.95rem;
+  font-weight: 300;
+  display: grid;
+  gap: 4px;
+}
+
+.contato-card {
+  background-color: var(--cinza-card);
+  border-radius: 26px;
+  padding: 22px 22px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+.contato-card h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+}
+
+.campo-form {
+  display: grid;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+.campo-form span {
+  opacity: 0.85;
+}
+
+.campo-form input,
+.campo-form textarea {
+  background-color: #1e1d28;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo-form input::placeholder,
+.campo-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+  border-color: var(--rosa);
+  box-shadow: 0 0 0 1px rgba(213, 106, 114, 0.6);
+}
+
+.btn-enviar {
+  margin-top: 8px;
+  padding: 10px 18px;
+  border-radius: 40px;
+  border: 2px solid var(--rosa);
+  background-color: transparent;
+  color: var(--rosa);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    letter-spacing 0.2s ease;
+}
+
+.btn-enviar:hover {
+  background-color: var(--rosa);
+  color: var(--roxo-escuro);
+  letter-spacing: 0.08em;
+}
+
+.footer {
+  background-color: #181624;
+  color: #fff;
+}
+
+.footer-wrapper {
+  padding: 32px 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-texto h4 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.footer-texto p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  max-width: 360px;
+}
+
+.footer-icones {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-icones a {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  background-color: #221f35;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.footer-icones img {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-icones a:hover {
+  background-color: var(--rosa);
+  border-color: var(--rosa);
+  transform: translateY(-2px);
+}
+
+.footer-copy {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 20px 14px;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.75;
+}
+
 @media (max-width: 900px) {
   .inicio-items {
     grid-template-columns: 1fr;
@@ -581,13 +842,39 @@ body {
     align-items: center;
   }
 
+  .experiencia-wrapper,
+  .contato-wrapper {
+    grid-template-columns: 1fr;
+    padding: 60px 20px 70px;
+  }
+
+  .experiencia-titulo,
+  .contato-texto h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .experiencia-texto p,
+  .contato-texto p {
+    text-align: center;
+  }
+
+  .experiencia-cards,
+  .contato-card {
+    margin-top: 12px;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .header-container {
     position: relative;
   }
 
   .menu-toggle {
     display: flex;
-    margin-left: auto;
   }
 
   .nav {
@@ -613,7 +900,9 @@ body {
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.15);
     z-index: 20;
-    transition: max-height 0.25s ease, opacity 0.25s ease,
+    transition:
+      max-height 0.25s ease,
+      opacity 0.25s ease,
       transform 0.25s ease;
   }
 
@@ -650,3 +939,4 @@ body {
     font-size: 1.1rem;
   }
 }
+
